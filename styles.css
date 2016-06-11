@@ -42,7 +42,8 @@ section > div:first-child {
 section > div > header {
   text-align:center;
   padding:20px;
-  background:rgba(255, 255, 255, 0.1);
+  background:rgba(255, 255, 255, 0.2);
+  font-weight:bold;
 }
 
 ul {
