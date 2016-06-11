@@ -35,6 +35,7 @@
   const skintones = '🏻 🏼 🏽 🏾 🏿'.split(' ')
 
   const spec = skintoneEligible.map((emoji, index) => index % 3 === 0 ? emoji + skintones[index % 5] : emoji)
+  // const spec = skintoneEligible.map(emoji => emoji + skintones[4]);
 
   console.log(skintoneEligible)
   console.log(skintones)

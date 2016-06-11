@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  width:600px;
+  width:500px;
   margin:auto;
 }
 
@@ -31,15 +31,39 @@ section {
 section > div {
   display:flex;
   flex:1;
+  flex-direction:column;
   background:rgba(255, 255, 255, 0.1);
-  padding:20px;
 }
 
 section > div:first-child {
-  border-right:1px solid #666;
+  margin-right:5px;
 }
 
 section > div > header {
   text-align:center;
-  width:100%;
+  padding:20px;
+  background:rgba(255, 255, 255, 0.1);
+}
+
+ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:36px;
+}
+
+li {
+  padding:5px 20px;
+}
+
+li:nth-child(even) {
+  background:rgba(255, 255, 255, 0.05);
+}
+
+.control {
+  text-align:right;
+}
+
+.experiment {
+  text-align:left;
 }
