@@ -1,0 +1,58 @@
+<!doctype html>
+<meta charset="utf-8" />
+<link href="styles.css" rel="stylesheet" />
+<form>
+  <label>
+    Choose a distribution
+    <select id="dist-selector">
+      <option value="even">Even</option>
+      <option value="us">United States</option>
+      <option value="us-youth">United States Youth</option>
+    </select>
+  </label>
+  <button id="roll-button">Roll Again</button>
+</form>
+<section>
+  <div>
+    <header>Without the Plugin</header>
+    <ul class="control"/>
+  </div>
+  <div>
+    <header>With the Plugin</header>
+    <ul class="experiment"/>
+  </div>
+</section>
+
+<script>
+  const distributions = {
+                   /* light ---------- dark */
+    'even'       : [ 0.2, 0.2, 0.2, 0.2, 0.2 ],
+    'us'         : [ 0.3, 0.1, 0.2, 0.3, 0.1 ],
+    'us-youth'   : [ 0.1, 0.2, 0.2, 0.3, 0.2 ]
+  }
+
+  const skintoneEligible = '👦 👧 👨 👩 👴 👵 👶 👱 👼 👸 👲 👳 👮 👷 💂 👯 🙆 🙅 💁 🙋 💆 💇 👰 🙎 🙍 🙇 👍 👎 👌 👊 ✊ 👋 ✋ 👐 👆 👇 👉 👈 🙌 🙏 👏 💪 🚶 🏃 💃 🎅 🏊 🏄 🛀 🚵 🚴 🏇'.split(' ')
+  const skintones = '🏻 🏼 🏽 🏾 🏿'.split(' ')
+
+  const spec = skintoneEligible.map((emoji, index) => index % 3 === 0 ? emoji + skintones[index % 5] : emoji)
+
+  console.log(skintoneEligible)
+  console.log(skintones)
+  console.log(spec)
+
+  window.onload = () => {
+    const distSelector = document.querySelector('#dist-selector')
+    distSelector.onchange = () => {
+      console.log(distSelector.value)
+    }
+
+    const rollButton = document.querySelector('#roll-button')
+    rollButton.onclick = e => {
+      e.preventDefault()
+      console.log('roll it!')
+    }
+
+    const controlGroup = document.querySelector('.control')
+    controlGroup.innerHTML = spec.map(emoji => `<li>${emoji}</li>`).join('\n');
+  }
+</script>
