@@ -12,20 +12,24 @@ body {
   margin:auto;
 }
 
-form {
-  margin-top:50px;
-}
-
-form > button {
-  display:inline-block;
-  float:right;
+button {
+  cursor:pointer;
+  margin-top:30px;
+  display:block;
+  width:100%;
+  padding:10px;
+  border:2px solid #f79f1c;
+  background:#ffde79;
+  color:#f79f1c;
+  font-size:22px;
+  font-weight:bold;
 }
 
 section {
   display:flex;
   flex-direction:row;
   width:100%;
-  margin-top:20px;
+  margin-top:5px;
 }
 
 section > div {
