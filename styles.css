@@ -25,6 +25,12 @@ button {
   font-weight:bold;
 }
 
+button:disabled {
+  border-color:#AAA;
+  background:#BBB;
+  color:#AAA;
+}
+
 section {
   display:flex;
   flex-direction:row;

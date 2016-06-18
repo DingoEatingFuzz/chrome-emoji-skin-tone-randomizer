@@ -1,26 +1,25 @@
 {
-  "name": "Headers Middleman",
-  "description": "Add, remove, or modify HTTP Headers for any request based on a regular expression",
+  "name": "Emoji Skintone Randomizer",
+  "description": "Applies a random skintone to any skintone-eligible emoji that doesn't already have one.",
 
   "manifest_version": 2,
-  "version": "1.2",
+  "version": "1.0",
 
-  "icons": {
-    "128": "images/icon/icon-128.png"
-  },
-
-  "homepage_url": "https://github.com/DingoEatingFuzz/chrome-headers-middleman",
+  "homepage_url": "https://github.com/DingoEatingFuzz/chrome-emoji-skintone-randomizer",
 
   "permissions" : [
     "webRequest",
     "webRequestBlocking",
-    "<all_urls>",
-    "storage"
+    "<all_urls>"
   ],
 
   "options_page": "options.html",
 
-  "background" : {
-    "scripts" : [ "background.js" ]
-  }
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["postprocess.js"],
+      "run_at": "document_end"
+    }
+  ]
 }
