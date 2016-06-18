@@ -4,13 +4,13 @@ const noSkintonePattern = new RegExp(`^\u200d?(${skintoneEligible.join('|')})(?!
 
 randomizeSkintones(document.body)
 
-function randomizeSkintones(el) {
+function randomizeSkintones (el) {
   walkTree(el, node => {
-    node.nodeValue = node.nodeValue.replace(noSkintonePattern, (_, emoji) => emoji + skintones[Math.floor(Math.random()*skintones.length)])
+    node.nodeValue = node.nodeValue.replace(noSkintonePattern, (_, emoji) => emoji + skintones[Math.floor(Math.random() * skintones.length)])
   })
 }
 
-function walkTree(node, mutator) {
+function walkTree (node, mutator) {
   // Adapted from Cloud to Butt: https://github.com/panicsteve/cloud-to-butt/blob/master/Source/content_script.js
   let child, next
 
@@ -30,7 +30,7 @@ function walkTree(node, mutator) {
         walkTree(child, mutator)
         child = next
       }
-      break;
+      break
     case 3: // Text node
       mutator(node)
   }
