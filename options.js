@@ -8,7 +8,6 @@ window.onload = () => {
   controlGroup.innerHTML = spec.map(emoji => `<li>${emoji}</li>`).join('\n')
 
   const rollButton = document.querySelector('#roll-button')
-  rollButton.disabled = false
   rollButton.onclick = e => {
     e.preventDefault()
     randomizeSkintones()
