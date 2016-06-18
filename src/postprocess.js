@@ -1,4 +1,4 @@
-const skintoneEligible = '👦 👧 👨 👩 👴 👵 👶 👱 👼 👸 👲 👳 👮 👷 💂 🙆 🙅 💁 🙋 💆 💇 👰 🙎 🙍 🙇 👍 👎 👌 👊 ✊ 👋 ✋ 👐 👆 👇 👉 👈 🙌 🙏 👏 💪 🚶 🏃 💃 🎅 🏊 🏄 🛀 🚵 🚴'.split(' ')
+{{skintoneEligible}}
 const skintones = '🏻 🏼 🏽 🏾 🏿'.split(' ')
 const noSkintonePattern = new RegExp(`^\u200d?(${skintoneEligible.join('|')})(?![${skintones.join('')}\u200d])`, 'gm')
 
