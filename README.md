@@ -4,7 +4,7 @@ The default yellow (or non-human) skintones are a great feature of the emoji spe
 
 If you would like to bring race back to your emoji in an impartial way, install this extension.
 
-**Download in the Chrome Webstore**
+**Download from the Chrome Webstore**
 
 ## Contributing
 
