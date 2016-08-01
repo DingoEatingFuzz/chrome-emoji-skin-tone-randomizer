@@ -22,3 +22,7 @@ This will save a `emoji-support.js` file in `./bin`. It will also inject that fi
 
 Now you can add the `./dist` directory as an unpacked extension in Chrome and start hacking.
 
+### Attribution
+
+Fist logo composited from [Emoji One assets](http://emojione.com/).
+
