@@ -1,9 +1,9 @@
 {
-  "name": "Emoji Skintone Randomizer",
+  "name": "Emoji Skin Tone Randomizer",
   "description": "Applies a random skintone to any skintone-eligible emoji that doesn't already have one.",
 
   "manifest_version": 2,
-  "version": "1.0",
+  "version": "1.0.1",
 
   "icons": {
     "512": "images/icon/icon-512.png",
